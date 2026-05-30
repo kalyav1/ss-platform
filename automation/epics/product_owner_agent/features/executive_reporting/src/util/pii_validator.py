@@ -264,17 +264,3 @@ class PIIVerifier:
                 "findings": [],
                 "summary": {"total_findings": 0}
             }
-
-
-# ------------------------------------------------------------
-# CLI ENTRYPOINT
-# ------------------------------------------------------------
-if __name__ == "__main__":
-    verifier = PIIVerifier()
-
-    if len(sys.argv) > 1:
-        text_input = sys.argv[1]
-    else:
-        text_input = sys.stdin.read()
-
-    verifier.validate(text_input)
